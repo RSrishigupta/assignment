@@ -213,4 +213,4 @@ function loadDataFromLocalStorage() {
   });
 }
 
-window.onload = loadDataFromLocalStorage;
+//window.onload = loadDataFromLocalStorage;
