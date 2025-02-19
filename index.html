@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neptune</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!--  this is the side panel area -->
+    <div class="sidebar">
+        <div class="sidepanel">
+            <!-- profile block  -->
+            <div class="abcd">
+                <div style="padding: 10px;">
+                    <img src="logo/Union.svg" alt="neptune logo"><br />
+                </div>
+                <div class="pa">
+                    <div style="padding: 10px;">
+                        <img src="logo/Group 79.png" alt="profile logo">
+                    </div>
+                    <div>
+                        <p style="font-size: larger;">Jessica Thompson</p>
+                        <p style="font-size: small; color:#626D82;">Primary user</p>
+                    </div>
+                    <div>
+                        <img src="logo/Shape.png" alt="" height="10px">
+                    </div>
+                </div>
+
+                <!--------------linkes to diiferent page group  -->
+                <div class="linkss">
+                    <div class="home">
+                        <img src="logo/home 1.png" alt="hoome image">
+                        <p>Home</p>
+                    </div>
+                    <div class="doc">
+                        <img src="logo/doc.png" alt="doc image">
+                        <p>Documents</p>
+                    </div>
+                    <div class="home">
+                        <img src="logo/char.png" alt="chat">
+                        <p>Chat with Neptune</p>
+                    </div>
+                    <div class="home">
+                        <img src="logo/help.png" alt=" help">
+                        <p>Help</p>
+                    </div>
+                    <div class="home">
+                        <img src="logo/settings.png" alt="settng">
+                        <p>Settings</p>
+                    </div>
+                </div>
+            </div>
+
+            <!------------- having trouble block -->
+
+            <div class="trouble">
+                <div class="t-image">
+                    <img src="logo/dial.png" />
+                </div>
+                <div class="trouble-text">
+                    <h1>
+                        Having trouble?
+                    </h1>
+                    <p>Feel free to contact us and we will always help you through the process.</p>
+                </div>
+                <button style="background-color: #1F4451;"> Contact us</button>
+            </div>
+            <!----------------------------------------------  -->
+
+        </div>
+    </div>
+    <!-- ---------------------------------------------- -->
+
+    <!-- -----------main body area -->
+    <main>
+        <div class="mainblock">
+            <div class="content">
+                <p>
+                    <span style="color: #436d7c;">Home</span>
+                </p>
+                <p>
+                    <img src="logo/right.png" alt="breadcrum">
+                </p>
+                <p style="color:#626D82">
+                    Documents
+                </p>
+            </div>
+            <div class="header_main">
+                <div>
+                    <h1>My Documents</h1>
+                </div>
+                <div class="searchblock">
+                    <button id="addbtn">ADD Documents</button>
+                    <input type="text" id="searchinput" class="Search" placeholder="Search Documents...."
+                        onkeyup="searchfun()" />
+                    <img src="logo/search.png" alt="searchicon" class="Searchicon">
+                </div>
+            </div>
+            <!-- //////////////////////////////////////////////////////////////////////////////////// -->
+            <div id="app"></div>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" id="close">&times;</span>
+                    <form id="form">
+                        <div class="radios">
+                            <h3> Enter the Title</h3>
+                            <input type="file" class="inputfile" required id="doctitle" />
+                            <h3>Status of the file</h3>
+                            <select id="status">
+                                <option value="Pending">Pending</option>
+                                <option value="Completed">Completed</option>
+                                <option value="Need Signing">Need Signing</option>
+                            </select>
+                            <button type="submit" id="subbtn" class="subbtn">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- //////////////////////////////////////////////////////////////////////////////////////// -->
+        </div>
+    </main>
+</body>
+<script src="script.js">
+</script>
+
+</html>
