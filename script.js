@@ -131,7 +131,7 @@ form.onsubmit = function (event) {
     date: `${formattedDate} ${formattedTime}`,
     action: button.innerText,
   };
-  saveToLocalStorage(rowData);
+  savelocal(rowData);
   modal.style.display = "none";
 };
 
@@ -139,18 +139,18 @@ function delfun(event) {
   if (event.target.closest(".delete-btn")) {
     const row = event.target.closest("tr");
     row.remove();
-    removeFromLocalStorage(row);
+    removelocal(row);
   }
 }
 
-function saveToLocalStorage(data) {
+function savelocal(data) {
   let documents = JSON.parse(localStorage.getItem("documents")) || [];
   documents.push(data);
   localStorage.setItem("documents", JSON.stringify(documents));
 }
 
 // delte funtion 
-function removeFromLocalStorage(rowElement) {
+function removelocal(rowElement) {
   let documents = JSON.parse(localStorage.getItem("documents")) || [];
   const rowId = rowElement.getAttribute("data-id");
   documents = documents.filter((doc) => doc.id !== parseInt(rowId));
@@ -158,7 +158,7 @@ function removeFromLocalStorage(rowElement) {
 }
 
 //load fro mthe storage
-function loadDataFromLocalStorage() {
+function localstore() {
   let documents = JSON.parse(localStorage.getItem("documents")) || [];
   documents.forEach((doc) => {
     const tr = document.createElement("tr");
@@ -213,4 +213,4 @@ function loadDataFromLocalStorage() {
   });
 }
 
-//window.onload = loadDataFromLocalStorage;
+window.onload = localstore;
